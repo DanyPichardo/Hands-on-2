@@ -5,38 +5,32 @@
 
 typedef enum {
     INICIO,
-    ABRE_LLAVE,
-    CLAVE_OBJETO,
-    DOS_PUNTOS_OBJETO,
+    ABRE_LLAVE_CLASE,
+    CLASE_KEY,
+    DOS_PUNTOS_CLASE,
     ABRE_ARRAY,
-    ABRE_LLAVE_INSTANCIA,
-    ABRE_COMILLAS_NK,
+    ABRE_LLAVE_OBJETO,
     NOMBRE_KEY,
-    CIERRA_COMILLAS_NK,
     DOS_PUNTOS_NOMBRE,
-    ABRE_COMILLAS_NV,
     NOMBRE_VALUE,
-    CIERRA_COMILLAS_NV,
     COMA_NOMBRE,
-    ABRE_COMILLAS_AK,
     APELLIDO_KEY,
-    CIERRA_COMILLAS_AK,
     DOS_PUNTOS_APELLIDO,
-    ABRE_COMILLAS_AV,
     APELLIDO_VALUE,
-    CIERRA_COMILLAS_AV,
-    CIERRA_INSTANCIA,
+    CIERRA_OBJETO,
     COMA_O_CIERRE,
     CIERRA_ARRAY,
-    ACEPTADO,
-    ERROR
+    ACEPTADO
 } State;
 
 //Validación de cadenas alfabeticas
-int alfabetica(const char *str);
+int alfabetico(const char *str);
 
 //Validación de cadenas alfanuméricas
 int alfanumerico(const char *str);
+
+//Validación de los valores y keys
+const char* cadenas(const char *ptr, char *buffer);
 
 //Validación de JSON
 int validarJ(const char *input);
